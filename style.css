@@ -1,0 +1,43 @@
+html{
+    font-size: 22px;
+}
+h2{
+    text-align: center;
+    color: gold;
+}
+h3{
+    color: #FF8C00;
+    font-family: serif;
+}
+
+p{
+   font-family: monospace;
+    font-weight: lighter;
+}
+.css-nahz7x.eqr7zpz4{
+    font-weight: bolder;
+    color: sandybrown;
+}
+.css-q8sbsg p{
+    font-size: 25px;
+    color:  burlywood;
+}
+
+@media screen and (max-width: 732px) {
+    p{
+        font-size: 12px;
+    }
+    html{
+        font-size: 10px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    h3{
+        font-size: 14px;
+    }
+    .css-q8sbsg p{
+        font-size: 15px;
+    }
+
+}
