@@ -69,10 +69,12 @@ def headLine(country):
                     st.image(str(new['urlToImage']))
                     st.subheader("Description")
                     st.write(translator.translate(str(new['description'])))
-                    title = str(new['title'])
+                    name = str(new['title'])
                     Time = str(new['publishedAt'])[:10]
                     st.write("Published at : ",Time)
-                    st.markdown("[For more info](https://www.news24.com/sport/othersport/athletics/mumbai-to-maritzburg-how-india-is-leading-international-charge-at-comrades-2023-20230610)")
+                    name = name.replace(" ", "+") 
+                    name = name.replace(":", "")
+                    st.markdown(f"[For more info...](https://www.google.com/search?q={name})", unsafe_allow_html=True)
                     st.write("---")
             except:
                 st.write("got an error")
