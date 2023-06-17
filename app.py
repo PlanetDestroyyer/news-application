@@ -11,7 +11,20 @@ st.set_page_config(page_title="News One",page_icon = "icon.png",layout="centered
 st.header("Today's News")
 translator= Translator(to_lang="en")
 
-
+st.markdown(
+    """
+    <meta name="Top Headline" content="News One">
+    <meta name="keywords" content="Top Headline, News One, Country News">
+    <meta name="author" content="Pranav Nalawade">
+    """,
+    unsafe_allow_html=True
+)
+st.markdown(
+    """
+    <link rel="canonical" href=https://newsone.onrender.com">
+    """,
+    unsafe_allow_html=True
+)
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
@@ -22,7 +35,7 @@ def add_bg(image_file):
     f"""
     <style>
     .stApp {{
-        background-image: linear-gradient(rgba(0.5,0.5,0.5,0.5),rgba(1,1,1,0.5)), url(data:image/{"png"};base64,{encoded_string.decode()});
+        background-image: linear-gradient(rgba(255,255,255,0.5),rgba(1,1,1,0.5)), url(data:image/{"png"};base64,{encoded_string.decode()});
         background-size: cover
     }}
     </style>
@@ -69,12 +82,10 @@ def headLine(country):
                     st.image(str(new['urlToImage']))
                     st.subheader("Description")
                     st.write(translator.translate(str(new['description'])))
-                    name = str(new['title'])
+                    title = str(new['title'])
                     Time = str(new['publishedAt'])[:10]
                     st.write("Published at : ",Time)
-                    name = name.replace(" ", "+") 
-                    name = name.replace(":", "")
-                    st.markdown(f"[For more info...](https://www.google.com/search?q={name})", unsafe_allow_html=True)
+                    st.markdown("[For more info](https://www.news24.com/sport/othersport/athletics/mumbai-to-maritzburg-how-india-is-leading-international-charge-at-comrades-2023-20230610)")
                     st.write("---")
             except:
                 st.write("got an error")
@@ -99,12 +110,10 @@ def India():
                     st.image(str(new['urlToImage']))
                     st.subheader("Description")
                     st.write(translator.translate(str(new['description'])))
-                    name = str(new['title'])
+                    title = str(new['title'])
                     Time = str(new['publishedAt'])[:10]
                     st.write("Published at : ",Time)
-                    name = name.replace(" ", "+") 
-                    name = name.replace(":", "")
-                    st.markdown(f"[For more info...](https://www.google.com/search?q={name})", unsafe_allow_html=True)
+                    st.markdown("[For more info](https://www.news24.com/sport/othersport/athletics/mumbai-to-maritzburg-how-india-is-leading-international-charge-at-comrades-2023-20230610)")
                     st.write("---")
             except:
                 st.write("got an error")
