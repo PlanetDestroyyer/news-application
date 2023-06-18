@@ -122,8 +122,9 @@ def India():
     except:
         pass
 
+
 def main():
-    add_bg('picture.jpg') 
+    add_bg('picture.jpg')
     hideAll()
     remove_underline()
     user_input = st.text_input("Enter the name of Country : ")
@@ -139,5 +140,11 @@ def main():
         ## Thanks for using our Services
     """)
 
+    st.markdown(
+        """
+        <meta name="description" content="A Streamlit app that shows top headlines from different countries.">
+        """,
+        unsafe_allow_html=True,
+    ) 
 if __name__ == '__main__':
     main()
