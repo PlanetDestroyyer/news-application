@@ -35,7 +35,7 @@ def add_bg(image_file):
     f"""
     <style>
     .stApp {{
-        background-image: linear-gradient(rgba(255,255,255,0.5),rgba(1,1,1,0.5)), url(data:image/{"png"};base64,{encoded_string.decode()});
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(1,1,1,0.5)), url(data:image/{"png"};base64,{encoded_string.decode()});
         background-size: cover
     }}
     </style>
