@@ -123,8 +123,7 @@ def India():
         pass
 
 
-def main():
-    add_bg('picture.jpg')
+def main():
     hideAll()
     remove_underline()
     user_input = st.text_input("Enter the name of Country : ")
