@@ -88,6 +88,7 @@ def headLine(country):
                     name = name.replace(" ", "+") 
                     name = name.replace(":", "")
                     st.markdown(f"[For more info...](https://www.google.com/search?q={name})", unsafe_allow_html=True)
+                    st.write(”---”)
             except:
                 st.write("got an error")
     except:
@@ -117,6 +118,7 @@ def India():
                     name = name.replace(" ", "+") 
                     name = name.replace(":", "")
                     st.markdown(f"[For more info...](https://www.google.com/search?q={name})", unsafe_allow_html=True)
+                    st.write("---")
             except:
                 st.write("got an error")
     except:
